@@ -34,6 +34,7 @@ day = int(input('What day fool?'))
 
 value = year_digits + math.floor(year_digits/4)
 
+print('After year/4', value)
 
 #Century Value Calulations
 if century_digits == 18:
@@ -41,18 +42,18 @@ if century_digits == 18:
 elif century_digits == 20:
     value = value + 6
 
+print('After cent calc', value)
+
 #Month Value Calculations
-while True:
+while month == None:
     if month == 'Jan' and year%4 != 0:
         value = value + 1
-        if year%4 == 0:
-            value = value + 3
-            break
+        break
     elif month == 'Feb' and year%4 == 0:
         value = value + 3
-        if year%4 != 0:
-            value = value + 4
-            break
+        if month == 'Feb' and year%4 != 0:
+         value = value + 4
+         break
     elif month == 'Mar' or 'Nov':
         value = value + 4
         break
@@ -76,21 +77,28 @@ while True:
         break
     else:
         print('Why did you not give me a correct answer? I thought I was clear enough.')
-    
-value = (value + day)%7
 
-if value == 1:
+        
+print('After month calc', value)
+
+value = value + day
+print('After day calc', value)
+total = value%7
+
+print ('Total', total)
+if total == 1:
     print('The day is Sunday')
-elif value == 2:
+elif total == 2:
     print('The day is Monday')
-elif value == 3:
+elif total == 3:
     print('The day is Tuesday')
-elif value == 4:
+elif total == 4:
     print('The day is Wednesday')
-elif value == 5:
+elif total == 5:
     print('The day is Thursday')
-elif value == 6:
+elif total == 6:
     print('The day is Friday')
-elif value == 0:
+elif total == 0:
     print('The day is Saturday')
+
 
