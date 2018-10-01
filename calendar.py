@@ -14,6 +14,9 @@
 # Create Formating
 # Output
 
+
+
+
 import math
 
 #greeting -
@@ -46,16 +49,17 @@ print('After cent calc', value)
 
 #Month Value Calculations
 while month == None:
-    if month == 'Jan' and year%4 != 0:
-        value = value + 1
+    if month == 'Jan' and (year%4 != 0):
+        value=+1
         break
-    elif month == 'Feb' and year%4 == 0:
-        value = value + 3
-        if month == 'Feb' and year%4 != 0:
-         value = value + 4
+    elif month == 'Feb' and (year%4 == 0):
+        value=+3
+        break
+        if month == 'Feb' and (year%4 != 0):
+         value=+4
          break
     elif month == 'Mar' or 'Nov':
-        value = value + 4
+        value=+4
         break
     elif month == 'Apr' or 'Jul':
         value = value + 0
