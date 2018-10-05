@@ -19,7 +19,7 @@
 
 import math as m
 
-#greeting -
+#greeting
 print('Hey there and welcome to the calendar program! ')
 
 
@@ -43,15 +43,16 @@ while month not in monthList:
 
 value = year_digits + m.floor(year_digits/4)
 
-print(value)
+
+
 
 #Century Value Calulations
 if century_digits == 18:
     value = value + 2
 elif century_digits == 20:
     value = value + 6
-    
-print(value)
+
+
 
 #Month Value Calculations
 
@@ -76,7 +77,7 @@ elif month == monthList[9]:
 elif month == monthList[8] or monthList[11]:
     value= value +6
   
-print(value)
+
 
 day = 0
 #Days in month
@@ -94,13 +95,12 @@ elif month in('Sep', 'Apr', 'Jun', 'Nov'):
     day = 30
     print('30 days!')
 
-print(day)
+    
 
-value = (value + day)%7
+value = (value + 1)%7
 
-print(value)
 
-print(value)
+
 if value == 1:
     print('The day is Sunday')
 elif value == 2:
