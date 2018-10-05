@@ -43,13 +43,15 @@ while month not in monthList:
 
 value = year_digits + m.floor(year_digits/4)
 
-
+print(value)
 
 #Century Value Calulations
 if century_digits == 18:
     value = value + 2
 elif century_digits == 20:
     value = value + 6
+    
+print(value)
 
 #Month Value Calculations
 
@@ -74,23 +76,29 @@ elif month == monthList[9]:
 elif month == monthList[8] or monthList[11]:
     value= value +6
   
+print(value)
 
-
-
+day = 0
 #Days in month
 if month == monthList[1]:
     if (year%4)==0:
         day = 29
+        print('I got here')
     else:
         day = 28
-elif month in ('Jan', 'Mar', 'May', 'Jul', 'Aug', 'Oct', 'Dec'):
+        print('I am this one')
+elif month in('Jan', 'Mar', 'May', 'Jul', 'Aug', 'Oct', 'Dec'):
     day = 31
-elif month in ('Sep', 'Apr', 'Jun', 'Nov'):
+    print('31 days!')
+elif month in('Sep', 'Apr', 'Jun', 'Nov'):
     day = 30
+    print('30 days!')
 
 print(day)
 
 value = (value + day)%7
+
+print(value)
 
 print(value)
 if value == 1:
@@ -107,5 +115,3 @@ elif value == 6:
     print('The day is Friday')
 elif value == 0:
     print('The day is Saturday')
-
-print(value)
